@@ -1,0 +1,19 @@
+meta {
+  name: Create Designation
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{URL}}/{{API_PREFIX}}/workspace/designation
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"departmentId":"cml9ezjgc0001igv7ekrhqegy","title":"Test Designation 1"}
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Get-Product
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{URL}}/{{API_PREFIX}}/products/slug/new-prroduct-for-kids
+  body: json
+  auth: none
+}
+
+settings {
+  encodeUrl: true
+}

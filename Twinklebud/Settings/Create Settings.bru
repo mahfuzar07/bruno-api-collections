@@ -1,0 +1,24 @@
+meta {
+  name: Create Settings
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{URL}}/{{API_PREFIX}}/settings/site-settings
+  body: multipartForm
+  auth: inherit
+}
+
+params:query {
+  ~storeName: 
+}
+
+body:multipart-form {
+  storeLogo: @file(/home/mahfuzar/Downloads/Kids-Toys-eCommerce-Website-by-Abdur-Razzak-on-Dribbble-11-02-2025_04_41_PM.png)
+  metaTitle: twinklebud
+}
+
+settings {
+  encodeUrl: true
+}

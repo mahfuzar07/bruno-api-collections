@@ -1,0 +1,21 @@
+meta {
+  name: Create Department
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{URL}}/{{API_PREFIX}}/workspace/department
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  name: Test Department
+  code: TD
+  ~description: 
+}
+
+settings {
+  encodeUrl: true
+}

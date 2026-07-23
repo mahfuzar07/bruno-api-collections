@@ -1,0 +1,15 @@
+meta {
+  name: Get All Varients
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{URL}}/{{API_PREFIX}}/products/cmqxnzwp500001zfwyqlf32uf/variants
+  body: json
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,28 @@
+meta {
+  name: Verify Employee By  QR
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{URL}}/{{API_PREFIX}}/employees/verify-employee-by-qr-code/LDR-03260002
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  avatar: @file(/home/mahfuzar/Downloads/banner.png)
+  officialEmail: mahfuzar@gmail.com
+  officialPhone: 01866175742
+  password: 123456
+  fullName: Md. Mahfuzar Rahman
+  departmentId: cmmchznnb00009mp6g9ae7xh0
+  designationId: cmmchzofb00099mp6wtns2lpb
+  gender: MALE
+  dateOfBirth: 1995-01-01
+  joiningDate: 1995-01-01
+}
+
+settings {
+  encodeUrl: true
+}

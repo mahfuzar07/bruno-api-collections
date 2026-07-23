@@ -1,0 +1,19 @@
+meta {
+  name: Delete Designation By ID
+  type: http
+  seq: 7
+}
+
+delete {
+  url: {{URL}}/{{API_PREFIX}}/workspace/designation/cmm55mxq00000cnp6ehrtncsl
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"departmentId":"cml9ezjgc0001igv7ekrhqegy"}
+}
+
+settings {
+  encodeUrl: true
+}

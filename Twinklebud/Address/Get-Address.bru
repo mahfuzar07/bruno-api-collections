@@ -1,0 +1,19 @@
+meta {
+  name: Get-Address
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{URL}}/{{API_PREFIX}}/addresses
+  body: multipartForm
+  auth: inherit
+}
+
+params:query {
+  ~title: Test product-1
+}
+
+settings {
+  encodeUrl: true
+}

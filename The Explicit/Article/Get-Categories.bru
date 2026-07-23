@@ -1,0 +1,15 @@
+meta {
+  name: Get-Categories
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{URL}}/{{API_PREFIX}}/category
+  body: json
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

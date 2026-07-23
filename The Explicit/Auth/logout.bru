@@ -1,0 +1,24 @@
+meta {
+  name: logout
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{URL}}/{{API_PREFIX}}/auth/logout
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+  
+      "email":"admin@gmail.com",
+      "password":"user123456"
+   
+  }
+}
+
+settings {
+  encodeUrl: true
+}

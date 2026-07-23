@@ -1,0 +1,23 @@
+meta {
+  name: Add-Items
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{URL}}/{{API_PREFIX}}/cart/items
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "productId": "cmq2qbn7g0000grp6o4egh54w",
+      "variantId": "cmq549qyj000a2ov77afzmw28",
+      "quantity": 5
+  }
+}
+
+settings {
+  encodeUrl: true
+}

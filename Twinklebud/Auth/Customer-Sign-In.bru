@@ -1,0 +1,21 @@
+meta {
+  name: Customer-Sign-In
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{URL}}/{{API_PREFIX}}/auth/customer/login
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {   "phone":"01866175745",
+      "password":"123456"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

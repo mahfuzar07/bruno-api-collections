@@ -1,0 +1,15 @@
+meta {
+  name: Get-Wishlist
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{URL}}/{{API_PREFIX}}/wishlists
+  body: multipartForm
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

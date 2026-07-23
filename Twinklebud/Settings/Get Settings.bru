@@ -1,0 +1,15 @@
+meta {
+  name: Get Settings
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{URL}}/{{API_PREFIX}}/settings/site-settings
+  body: none
+  auth: none
+}
+
+settings {
+  encodeUrl: true
+}

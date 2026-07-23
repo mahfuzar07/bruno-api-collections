@@ -1,0 +1,19 @@
+meta {
+  name: Update-Attribute
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{URL}}/{{API_PREFIX}}/category/cmh9k8mu00000w8wgng6cvwym
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  name: Smartphones
+}
+
+settings {
+  encodeUrl: true
+}

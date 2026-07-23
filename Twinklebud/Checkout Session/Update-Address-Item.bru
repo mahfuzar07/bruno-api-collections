@@ -1,0 +1,28 @@
+meta {
+  name: Update-Address-Item
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{URL}}/{{API_PREFIX}}/addresses/cmpxxunlp0000q8v7wq0o0l6v
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "label": "HOME",
+    "recipientName": "Md. Mahfuzar Rahman Shovon",
+    "phone": "01866175745",
+    "city": "Rajshahi",
+    "addressLine1": "Rajshahi, Rajshahi",
+    "addressLine2": "",
+    "area": "Rajshahi",
+    "postalCode": "1200"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

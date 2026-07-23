@@ -1,0 +1,38 @@
+meta {
+  name: Get-Cart
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{URL}}/{{API_PREFIX}}/cart
+  body: multipartForm
+  auth: inherit
+}
+
+params:query {
+  ~title: Test product-1
+}
+
+body:multipart-form {
+  title: Test r
+  categoryId: 1
+  price: 500
+  stock: 100
+  discount: 50
+  discountType: FIXED
+  id: cmpebi12u0001qtp6d25pusbl
+  variants: '''
+    
+      {
+        "id": cmpebxpvv0006qtp64t3r9os3,
+    
+      }
+    
+  '''
+  ~slug: test-2
+}
+
+settings {
+  encodeUrl: true
+}

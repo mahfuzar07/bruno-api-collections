@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "The Explicit",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

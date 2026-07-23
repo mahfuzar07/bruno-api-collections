@@ -1,0 +1,21 @@
+meta {
+  name: Update-product
+  type: http
+  seq: 2
+}
+
+patch {
+  url: {{URL}}/{{API_PREFIX}}/products/cmq7s8z4i00009gv7ydau0ee1
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  price: 500
+  ~title: smartphone
+  ~url: @file()
+}
+
+settings {
+  encodeUrl: true
+}

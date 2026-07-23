@@ -1,0 +1,23 @@
+meta {
+  name: Customer-Req-OTP
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{URL}}/{{API_PREFIX}}/auth/customer/request-otp
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "phone":"01866175747",
+      "password":"01866175747"
+  
+  }
+}
+
+settings {
+  encodeUrl: true
+}

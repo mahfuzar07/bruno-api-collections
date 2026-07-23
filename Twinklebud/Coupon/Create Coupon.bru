@@ -1,0 +1,31 @@
+meta {
+  name: Create Coupon
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{URL}}/{{API_PREFIX}}/coupon
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "code": "EID2026",
+    "title": "Eid Special Discount",
+    "description": "Get special discount on all products during Eid campaign.",
+    "type": "PERCENTAGE",
+    "discountValue": 15,
+    "minOrderValue": 500,
+    "maxDiscount": 300,
+    "usageLimit": 1000,
+    "perUserLimit": 2,
+    "startsAt": "2026-05-20T00:00:00.000Z",
+    "expiresAt": "2026-05-30T23:59:59.000Z"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

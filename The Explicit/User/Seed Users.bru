@@ -1,0 +1,15 @@
+meta {
+  name: Seed Users
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{URL}}/{{API_PREFIX}}/seed/users
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

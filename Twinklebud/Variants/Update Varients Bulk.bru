@@ -1,0 +1,19 @@
+meta {
+  name: Update Varients Bulk
+  type: http
+  seq: 5
+}
+
+patch {
+  url: {{URL}}/{{API_PREFIX}}/products/cmq7s8z4i00009gv7ydau0ee1/variants/bulk
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  name: Smartphones
+}
+
+settings {
+  encodeUrl: true
+}

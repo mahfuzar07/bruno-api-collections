@@ -1,0 +1,28 @@
+meta {
+  name: Add-Address
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{URL}}/{{API_PREFIX}}/addresses
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "label": "HOME",
+    "recipientName": "Md. Mahfuzar Rahman",
+    "phone": "01866175745",
+    "city": "Dhaka",
+    "addressLine1": "Mirpur, Dhaka",
+    "addressLine2": "",
+    "area": "Mirpur",
+    "postalCode": "1200"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

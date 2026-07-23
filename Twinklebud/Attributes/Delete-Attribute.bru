@@ -1,0 +1,22 @@
+meta {
+  name: Delete-Attribute
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{URL}}/{{API_PREFIX}}/products/cmq7s8z4i00009gv7ydau0ee1/attributes/cmq96frsm0004s8v7cnpkaxpl
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "name":"Category"
+   
+  }
+}
+
+settings {
+  encodeUrl: true
+}

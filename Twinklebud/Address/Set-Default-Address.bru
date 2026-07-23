@@ -1,0 +1,15 @@
+meta {
+  name: Set-Default-Address
+  type: http
+  seq: 6
+}
+
+patch {
+  url: {{URL}}/{{API_PREFIX}}/addresses/cmpxxunlp0000q8v7wq0o0l6v/default
+  body: json
+  auth: none
+}
+
+settings {
+  encodeUrl: true
+}

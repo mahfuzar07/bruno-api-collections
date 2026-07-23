@@ -1,0 +1,29 @@
+meta {
+  name: Create-Attribute
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{URL}}/{{API_PREFIX}}/products/cmq7s8z4i00009gv7ydau0ee1/attributes
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~title: Test product-1
+}
+
+body:json {
+  {
+    "code": "color",
+    "name": "Color",
+    "viewType": "RADIO",
+    "status": "ACTIVE",
+    "description": "Product color options"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

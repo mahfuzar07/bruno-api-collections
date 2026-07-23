@@ -1,0 +1,22 @@
+meta {
+  name: Delete-Attribute-Value
+  type: http
+  seq: 7
+}
+
+delete {
+  url: {{URL}}/{{API_PREFIX}}/products/cmq7s8z4i00009gv7ydau0ee1/attributes/cmq7sloaf00039gv79dh25nq1/values/cmq7stcy400059gv730nzrf8o
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "value": "Crimson Red",
+    "hexColor": "#FF0000"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,60 @@
+meta {
+  name: Create-Product
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{URL}}/{{API_PREFIX}}/products
+  body: multipartForm
+  auth: inherit
+}
+
+params:query {
+  ~title: Test product-1
+}
+
+body:multipart-form {
+  title: Test
+  categoryId: 1
+  slug: test
+  id: cmmkytpyb0000cnp6peeqgyrn
+  attributes: '''
+    [
+      {
+        "code": "color",
+        "name": "Color",
+        "viewType": "RADIO",
+        "values": [
+          { "value": "Red", "hexColor": "#ff0000" },
+          { "value": "Blue" },
+      { "value": "green" }
+        ]
+      }
+    ]
+    
+  '''
+  variants: '''
+    [
+      { "id":"cmml03d0g0007vdp6cpm6lf9y",
+        "price": 100,
+        "stock": 5,
+        "discount": 0,
+        "discountType": "FIXED",
+        "attributeValueIds": ["cmmkzfh4a0001zvp6affg5ebg"] 
+      }, { 
+        "price": 1200,
+        "stock": 5,
+        "discount": 0,
+        "discountType": "FIXED",
+        "attributeValueIds": ["cmmkzfh7l0002zvp6mts85kyb"] 
+      }
+    ]
+    
+  '''
+  productId: cmmkytpyb0000cnp6peeqgyrn
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,28 @@
+meta {
+  name: Update-Address-Item
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{URL}}/{{API_PREFIX}}/addresses/cmpxxwhfh0001q8v7blvncxt7
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "label": "HOME",
+    "recipientName": "Md. Mahfuzar Rahman Shovon",
+    "phone": "01866175745",
+    "city": "Dhaka",
+    "addressLine1": "Mirpur, Dhaka",
+    "addressLine2": "",
+    "area": "Dhaka",
+    "postalCode": "6300"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

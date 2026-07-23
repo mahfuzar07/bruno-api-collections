@@ -1,0 +1,15 @@
+meta {
+  name: Get Coupons
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{URL}}/{{API_PREFIX}}/coupon
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

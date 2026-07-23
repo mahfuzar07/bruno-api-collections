@@ -1,0 +1,15 @@
+meta {
+  name: Get Departments
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{URL}}/{{API_PREFIX}}/workspace/department
+  body: json
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

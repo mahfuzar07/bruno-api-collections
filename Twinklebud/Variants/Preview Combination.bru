@@ -1,0 +1,19 @@
+meta {
+  name: Preview Combination
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{URL}}/{{API_PREFIX}}/products/cmq7s8z4i00009gv7ydau0ee1/variants/combinations/preview
+  body: multipartForm
+  auth: inherit
+}
+
+params:query {
+  ~title: Test product-1
+}
+
+settings {
+  encodeUrl: true
+}

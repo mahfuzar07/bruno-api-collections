@@ -1,0 +1,26 @@
+meta {
+  name: Update-Attribute-Value
+  type: http
+  seq: 6
+}
+
+patch {
+  url: {{URL}}/{{API_PREFIX}}/products/cmq7s8z4i00009gv7ydau0ee1/attributes/cmq7sloaf00039gv79dh25nq1/values/cmq7stcy400059gv730nzrf8o
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~title: Test product-1
+}
+
+body:json {
+  {
+    "value": "Crimson Red",
+    "hexColor": "#FF0000"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

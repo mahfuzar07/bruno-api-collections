@@ -1,0 +1,25 @@
+meta {
+  name: Update Varients
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{URL}}/{{API_PREFIX}}/products/cmqxnzwp500001zfwyqlf32uf/variants/cmqxp3m7n00061g9wnxlw2uwt
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "price": 1200,
+    "stock": 45,
+    "discount":150
+  
+  
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,27 @@
+meta {
+  name: Reader-Req-OTP
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{URL}}/{{API_PREFIX}}/auth/reader/request-otp
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~email: 
+}
+
+body:json {
+  {
+      "email":"mahfuzar271@gmail.com",
+      "password":"01866175747"
+  
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Get-Attributes
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{URL}}/{{API_PREFIX}}/products/cmq7s8z4i00009gv7ydau0ee1/attributes
+  body: json
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

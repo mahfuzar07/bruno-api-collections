@@ -1,0 +1,22 @@
+meta {
+  name: Delete-Category
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{URL}}/{{API_PREFIX}}/category/cmh9k8mu00000w8wgng6cvwym
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "name":"Category"
+   
+  }
+}
+
+settings {
+  encodeUrl: true
+}

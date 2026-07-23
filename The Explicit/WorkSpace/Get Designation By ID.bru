@@ -1,0 +1,19 @@
+meta {
+  name: Get Designation By ID
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{URL}}/{{API_PREFIX}}/workspace/designation/cml9ezn2l000nigv7av6ma85h
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"departmentId":"cml9ezjgc0001igv7ekrhqegy"}
+}
+
+settings {
+  encodeUrl: true
+}

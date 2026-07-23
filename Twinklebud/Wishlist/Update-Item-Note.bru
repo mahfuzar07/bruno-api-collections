@@ -1,0 +1,15 @@
+meta {
+  name: Update-Item-Note
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{URL}}/{{API_PREFIX}}/category
+  body: json
+  auth: none
+}
+
+settings {
+  encodeUrl: true
+}

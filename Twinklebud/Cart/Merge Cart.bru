@@ -1,0 +1,28 @@
+meta {
+  name: Merge Cart
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{URL}}/{{API_PREFIX}}/cart/merge
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "label": "HOME",
+    "recipientName": "Md. Mahfuzar Rahman Shovon",
+    "phone": "01866175745",
+    "city": "Rajshahi",
+    "addressLine1": "Rajshahi, Rajshahi",
+    "addressLine2": "",
+    "area": "Rajshahi",
+    "postalCode": "1200"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

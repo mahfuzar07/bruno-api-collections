@@ -1,0 +1,25 @@
+meta {
+  name: Generate Combination
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{URL}}/{{API_PREFIX}}/products/cmq7s8z4i00009gv7ydau0ee1/variants/generate
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~title: Test product-1
+}
+
+body:json {
+  {
+    "defaultVariantId": null
+  }
+}
+
+settings {
+  encodeUrl: true
+}

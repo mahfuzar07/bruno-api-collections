@@ -1,0 +1,23 @@
+meta {
+  name: Coupon Validation
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{URL}}/{{API_PREFIX}}/coupon/validate
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+        "code": "EID2028",
+         "subtotal": 1000
+  
+  }
+}
+
+settings {
+  encodeUrl: true
+}

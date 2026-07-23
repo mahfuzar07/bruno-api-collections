@@ -1,0 +1,19 @@
+meta {
+  name: Get-Category Copy
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{URL}}/{{API_PREFIX}}/category/11
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: access_token
+}
+
+settings {
+  encodeUrl: true
+}

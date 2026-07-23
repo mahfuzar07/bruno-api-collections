@@ -1,0 +1,22 @@
+meta {
+  name: Get-Address-Item
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{URL}}/{{API_PREFIX}}/addresses/cmpxxunlp0000q8v7wq0o0l6v
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "name":"Category"
+   
+  }
+}
+
+settings {
+  encodeUrl: true
+}

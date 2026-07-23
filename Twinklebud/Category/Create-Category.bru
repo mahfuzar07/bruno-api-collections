@@ -1,0 +1,23 @@
+meta {
+  name: Create-Category
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{URL}}/{{API_PREFIX}}/category
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  name: new category
+  icon: @file(/home/mahfuzar/Desktop/twinklebud-frontend/public/assets/ChatGPT_Image_Dec_2__2025__05_06_56_PM-removebg-preview.PNG)
+  banner: @file()
+  ~parentId: 37
+  ~id: 6
+}
+
+settings {
+  encodeUrl: true
+}

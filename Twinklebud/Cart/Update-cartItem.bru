@@ -1,0 +1,22 @@
+meta {
+  name: Update-cartItem
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{URL}}/{{API_PREFIX}}/cart/items/cmq4yux3o0004m0v7zmxmb4hp
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+  
+      "quantity": 10
+  }
+}
+
+settings {
+  encodeUrl: true
+}
