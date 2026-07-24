@@ -1,0 +1,36 @@
+info:
+  name: 2.1 Login (owner)
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{URL}}/{{API_PREFIX}}/auth/login"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "slug": "default-organization",
+        "phone": "01700000000",
+        "password": "ChangeMe123!"
+      }
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        const res = res.getBody();
+        if (res.data) {
+          bru.setCollectionVar('accessToken', res.data.accessToken);
+          bru.setCollectionVar('refreshToken', res.data.refreshToken);
+        }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

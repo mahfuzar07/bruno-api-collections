@@ -1,0 +1,44 @@
+opencollection: 1.0.0
+
+info:
+  name: F-Commerce OMS
+config:
+  proxy:
+    inherit: true
+    config:
+      protocol: http
+      hostname: ""
+      port: ""
+      auth:
+        username: ""
+        password: ""
+      bypassProxy: ""
+
+request:
+  variables:
+    - name: baseUrl
+      value: http://localhost:3000/api/v1
+    - name: slug
+      value: xianmart
+    - name: devCode
+      value: ""
+    - name: accessToken
+      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXJ6ZXl0OWswMDIweWRwNjU5dWJ5ZGJ4IiwidGVuYW50SWQiOiJjbXJ6ZXlzdGUwMDAweWRwNmdyM3hjd3BhIiwicm9sZXMiOlsiU1VQRVJfQURNSU4iXSwiaWF0IjoxNzg0OTI2ODQ4LCJleHAiOjE3ODQ5Mjc3NDh9.30nfpQHbYfuhafLdBkPMc0GnCLLOviY0aLNAaHtDTdw
+    - name: refreshToken
+      value: ""
+    - name: tenantId
+      value: ""
+    - name: ownerUserId
+      value: ""
+    - name: deliveryRoleId
+      value: cmrzeysue0001ydp6khint8ab
+    - name: staffUserId
+      value: cmrzeyt9k0020ydp659ubydbx
+    - name: staffAccessToken
+      value: ""
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git

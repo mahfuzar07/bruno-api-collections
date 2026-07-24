@@ -1,19 +1,23 @@
 info:
-  name: 2.4 Refresh token
+  name: 5.1 Create role
   type: http
-  seq: 4
+  seq: 1
 
 http:
   method: POST
-  url: "{{baseUrl}}/auth/refresh"
+  url: "{{baseUrl}}/roles"
   headers:
+    - name: Authorization
+      value: Bearer {{accessToken}}
     - name: Content-Type
       value: application/json
   body:
     type: json
     data: |-
       {
-        "refreshToken": "{{refreshToken}}"
+        "name": "DELIVERY",
+        "description": "Delivery staff",
+        "permissionNames": []
       }
   auth: inherit
 
@@ -22,10 +26,7 @@ runtime:
     - type: after-response
       code: |-
         const res = res.getBody();
-        if (res.data) {
-          pm.collectionVariables.set('accessToken', res.data.accessToken);
-          pm.collectionVariables.set('refreshToken', res.data.refreshToken);
-        }
+        if (res.data && res.data.id) { bru.setCollectionVar('deliveryRoleId', res.data.id); }
 
 settings:
   encodeUrl: true

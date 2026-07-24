@@ -1,11 +1,11 @@
 info:
-  name: 2.1 Login (owner)
+  name: 1.2 Verify registration OTP
   type: http
-  seq: 1
+  seq: 2
 
 http:
   method: POST
-  url: "{{baseUrl}}/auth/login"
+  url: "{{baseUrl}}/organizations/verify-otp"
   headers:
     - name: Content-Type
       value: application/json
@@ -14,8 +14,7 @@ http:
     data: |-
       {
         "slug": "{{slug}}",
-        "phone": "+8801700000000",
-        "password": "SuperSecret123"
+        "code": "{{devCode}}"
       }
   auth: inherit
 
@@ -25,8 +24,10 @@ runtime:
       code: |-
         const res = res.getBody();
         if (res.data) {
-          pm.collectionVariables.set('accessToken', res.data.accessToken);
-          pm.collectionVariables.set('refreshToken', res.data.refreshToken);
+          bru.setCollectionVar('accessToken', res.data.accessToken);
+          bru.setCollectionVar('refreshToken', res.data.refreshToken);
+          bru.setCollectionVar('tenantId', res.data.tenantId);
+          bru.setCollectionVar('ownerUserId', res.data.ownerUserId);
         }
 
 settings:

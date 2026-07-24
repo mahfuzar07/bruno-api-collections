@@ -1,11 +1,11 @@
 info:
-  name: 6.1 Create permission
+  name: 5.5 Assign role to user
   type: http
-  seq: 1
+  seq: 5
 
 http:
   method: POST
-  url: "{{baseUrl}}/permissions"
+  url: "{{URL}}/{{API_PREFIX}}/roles/assign"
   headers:
     - name: Authorization
       value: Bearer {{accessToken}}
@@ -15,8 +15,8 @@ http:
     type: json
     data: |-
       {
-        "name": "orders.view",
-        "description": "Can view orders"
+        "userId": "{{staffUserId}}",
+        "roleId": "{{deliveryRoleId}}"
       }
   auth: inherit
 

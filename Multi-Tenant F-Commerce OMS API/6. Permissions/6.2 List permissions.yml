@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/permissions"
+  url: "{{URL}}/{{API_PREFIX}}/permissions"
   headers:
     - name: Authorization
       value: Bearer {{accessToken}}

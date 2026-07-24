@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: "{{baseUrl}}/users"
+  url: "{{URL}}/{{API_PREFIX}}/users"
   headers:
     - name: Authorization
       value: Bearer {{accessToken}}
@@ -28,7 +28,7 @@ runtime:
     - type: after-response
       code: |-
         const res = res.getBody();
-        if (res.data && res.data.id) { pm.collectionVariables.set('staffUserId', res.data.id); }
+        if (res.data && res.data.id) { bru.setCollectionVar('staffUserId', res.data.id); }
 
 settings:
   encodeUrl: true

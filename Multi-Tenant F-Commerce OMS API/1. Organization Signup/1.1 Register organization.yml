@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: "{{baseUrl}}/organizations/register"
+  url: "{{URL}}/{{API_PREFIX}}/organizations/register"
   headers:
     - name: Content-Type
       value: application/json
@@ -14,11 +14,11 @@ http:
     data: |-
       {
         "orgName": "Xianmart",
-        "slug": "{{slug}}",
-        "ownerName": "Rafi Hasan",
+        "slug": "xianmart",
+        "ownerName": "Md. Mahfuzar Rahman",
         "ownerPhone": "+8801700000000",
-        "ownerEmail": "rafi@xianmart.com",
-        "ownerPassword": "SuperSecret123"
+        "ownerEmail": "mahfuzar@gmail.com",
+        "ownerPassword": "super123"
       }
   auth: inherit
 
@@ -27,7 +27,7 @@ runtime:
     - type: after-response
       code: |-
         const res = res.getBody();
-        if (res.data && res.data.devCode) { pm.collectionVariables.set('devCode', res.data.devCode); }
+        if (res.data && res.data.devCode) { bru.setCollectionVar('devCode', res.data.devCode); }
 
 settings:
   encodeUrl: true
