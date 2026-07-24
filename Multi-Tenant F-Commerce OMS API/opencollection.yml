@@ -23,9 +23,9 @@ request:
     - name: devCode
       value: ""
     - name: accessToken
-      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXJ6ZXl0OWswMDIweWRwNjU5dWJ5ZGJ4IiwidGVuYW50SWQiOiJjbXJ6ZXlzdGUwMDAweWRwNmdyM3hjd3BhIiwicm9sZXMiOlsiU1VQRVJfQURNSU4iXSwiaWF0IjoxNzg0OTMwOTUwLCJleHAiOjE3ODQ5MzE4NTB9.75R5UlRpxSCmiKDiVc-L53dIySAATHfkpTMbjTtJOrQ
+      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXJ6ZXl0OWswMDIweWRwNjU5dWJ5ZGJ4IiwidGVuYW50SWQiOiJjbXJ6ZXlzdGUwMDAweWRwNmdyM3hjd3BhIiwicm9sZXMiOlsiU1VQRVJfQURNSU4iXSwiaWF0IjoxNzg0OTMyMDA5LCJleHAiOjE3ODQ5MzI5MDl9.rdx_NfDHnnNaLqO-ZVw0HkmkmjGVvDmDC-j0BgNQ4pE
     - name: refreshToken
-      value: ""
+      value: 5187bc705e0641f712716c83a48f3e7152d57fc75994f7dcdfcde4c2acbc676a226297f84a813d78
     - name: tenantId
       value: ""
     - name: ownerUserId
