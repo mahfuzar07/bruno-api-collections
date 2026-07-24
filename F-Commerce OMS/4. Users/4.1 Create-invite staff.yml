@@ -1,0 +1,37 @@
+info:
+  name: 4.1 Create/invite staff
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseUrl}}/users"
+  headers:
+    - name: Authorization
+      value: Bearer {{accessToken}}
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Delivery Boy 1",
+        "phone": "+8801900000000",
+        "email": "delivery1@xianmart.com",
+        "password": "DeliveryPass123",
+        "roleId": "{{deliveryRoleId}}"
+      }
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        const res = res.getBody();
+        if (res.data && res.data.id) { pm.collectionVariables.set('staffUserId', res.data.id); }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

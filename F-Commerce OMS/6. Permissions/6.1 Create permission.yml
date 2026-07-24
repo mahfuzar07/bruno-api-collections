@@ -1,0 +1,27 @@
+info:
+  name: 6.1 Create permission
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseUrl}}/permissions"
+  headers:
+    - name: Authorization
+      value: Bearer {{accessToken}}
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "name": "orders.view",
+        "description": "Can view orders"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

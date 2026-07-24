@@ -1,0 +1,36 @@
+info:
+  name: 1.1 Register organization
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseUrl}}/organizations/register"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "orgName": "Xianmart",
+        "slug": "{{slug}}",
+        "ownerName": "Rafi Hasan",
+        "ownerPhone": "+8801700000000",
+        "ownerEmail": "rafi@xianmart.com",
+        "ownerPassword": "SuperSecret123"
+      }
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        const res = res.getBody();
+        if (res.data && res.data.devCode) { pm.collectionVariables.set('devCode', res.data.devCode); }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

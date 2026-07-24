@@ -1,0 +1,26 @@
+info:
+  name: 3.1 Send OTP (e.g. CHANGE_PHONE)
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseUrl}}/otp/send"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "tenantId": "{{tenantId}}",
+        "phone": "+8801700000000",
+        "purpose": "CHANGE_PHONE"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

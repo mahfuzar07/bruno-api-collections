@@ -1,0 +1,28 @@
+info:
+  name: 2.2 Staff self-register into tenant
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{baseUrl}}/auth/register"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "slug": "{{slug}}",
+        "name": "Karim Uddin",
+        "phone": "+8801800000000",
+        "email": "karim@xianmart.com",
+        "password": "StaffPass123"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

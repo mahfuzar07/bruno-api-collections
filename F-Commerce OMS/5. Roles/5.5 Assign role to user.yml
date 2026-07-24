@@ -1,0 +1,27 @@
+info:
+  name: 5.5 Assign role to user
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{baseUrl}}/roles/assign"
+  headers:
+    - name: Authorization
+      value: Bearer {{accessToken}}
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "userId": "{{staffUserId}}",
+        "roleId": "{{deliveryRoleId}}"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
