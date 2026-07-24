@@ -23,7 +23,7 @@ request:
     - name: devCode
       value: ""
     - name: accessToken
-      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXJ6ZXl0OWswMDIweWRwNjU5dWJ5ZGJ4IiwidGVuYW50SWQiOiJjbXJ6ZXlzdGUwMDAweWRwNmdyM3hjd3BhIiwicm9sZXMiOlsiU1VQRVJfQURNSU4iXSwiaWF0IjoxNzg0OTI2ODQ4LCJleHAiOjE3ODQ5Mjc3NDh9.30nfpQHbYfuhafLdBkPMc0GnCLLOviY0aLNAaHtDTdw
+      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXJ6ZXl0OWswMDIweWRwNjU5dWJ5ZGJ4IiwidGVuYW50SWQiOiJjbXJ6ZXlzdGUwMDAweWRwNmdyM3hjd3BhIiwicm9sZXMiOlsiU1VQRVJfQURNSU4iXSwiaWF0IjoxNzg0OTMwOTUwLCJleHAiOjE3ODQ5MzE4NTB9.75R5UlRpxSCmiKDiVc-L53dIySAATHfkpTMbjTtJOrQ
     - name: refreshToken
       value: ""
     - name: tenantId
