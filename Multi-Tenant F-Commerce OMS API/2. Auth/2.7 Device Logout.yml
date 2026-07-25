@@ -1,14 +1,11 @@
 info:
-  name: 2.5 Logout
+  name: 2.7 Device Logout
   type: http
-  seq: 5
+  seq: 7
 
 http:
-  method: POST
-  url: "{{URL}}/{{API_PREFIX}}/auth/logout"
-  body:
-    type: json
-    data: ""
+  method: DELETE
+  url: "{{URL}}/{{API_PREFIX}}/auth/sessions/"
   auth: inherit
 
 settings:

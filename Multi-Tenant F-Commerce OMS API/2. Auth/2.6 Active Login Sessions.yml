@@ -1,14 +1,11 @@
 info:
-  name: 2.5 Logout
+  name: 2.6 Active Login Sessions
   type: http
-  seq: 5
+  seq: 6
 
 http:
-  method: POST
-  url: "{{URL}}/{{API_PREFIX}}/auth/logout"
-  body:
-    type: json
-    data: ""
+  method: GET
+  url: "{{URL}}/{{API_PREFIX}}/auth/login"
   auth: inherit
 
 settings:
