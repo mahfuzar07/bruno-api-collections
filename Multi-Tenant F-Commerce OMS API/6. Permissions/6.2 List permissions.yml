@@ -6,9 +6,6 @@ info:
 http:
   method: GET
   url: "{{URL}}/{{API_PREFIX}}/permissions"
-  headers:
-    - name: Authorization
-      value: Bearer {{accessToken}}
   auth: inherit
 
 settings:

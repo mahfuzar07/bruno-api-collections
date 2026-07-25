@@ -6,9 +6,6 @@ info:
 http:
   method: GET
   url: "{{URL}}/{{API_PREFIX}}/organizations/me"
-  headers:
-    - name: Authorization
-      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbXJ6ZXl0OWswMDIweWRwNjU5dWJ5ZGJ4IiwidGVuYW50SWQiOiJjbXJ6ZXlzdGUwMDAweWRwNmdyM3hjd3BhIiwicm9sZXMiOlsiU1VQRVJfQURNSU4iXSwiaWF0IjoxNzg0OTI2ODQ4LCJleHAiOjE3ODQ5Mjc3NDh9.30nfpQHbYfuhafLdBkPMc0GnCLLOviY0aLNAaHtDTdw
   auth: inherit
 
 settings:
