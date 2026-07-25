@@ -6,9 +6,6 @@ info:
 http:
   method: GET
   url: "{{URL}}/{{API_PREFIX}}/subscriptions/me"
-  headers:
-    - name: Content-Type
-      value: application/json
   body:
     type: json
     data: ""

@@ -11,12 +11,7 @@ http:
       value: application/json
   body:
     type: json
-    data: |-
-      {
-        "slug": "default-organization",
-        "phone": "01700000000",
-        "password": "ChangeMe123!"
-      }
+    data: ""
   auth: inherit
 
 runtime:
