@@ -13,7 +13,7 @@ http:
     type: json
     data: |-
       {
-        "slug": "default-organization",
+
         "phone": "01700000000",
         "password": "ChangeMe123!"
       }
